@@ -50,7 +50,7 @@ resource "aws_route_table" "public_rt" {
   }
 
   tags = {
-    "Name"    = "Private Route Table"
+    "Name"    = "Prublic Route Table"
     "Created" = "Terraform"
   }
 }
