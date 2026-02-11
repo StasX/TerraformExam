@@ -1,4 +1,2 @@
 #### This exam  buit  from 2 sections
-**The answers can be found by following the links:**  
-[**Section 1**](https://github.com/StasX/TerraformExam/blob/main/Section%201%20Solutions.md)  
-[**Section 2**](https://github.com/StasX/TerraformExam/blob/main/Section%202%20Solutions.md)
+**The answers can be found by following the links:**  [**Section 1**](https://github.com/StasX/TerraformExam/blob/main/Section%201%20Solutions.md)  [**Section 2**](https://github.com/StasX/TerraformExam/blob/main/Section%202%20Solutions.md)
