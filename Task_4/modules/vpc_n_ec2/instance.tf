@@ -1,6 +1,6 @@
 resource "aws_instance" "exam_instance" {
   count                       = var.subnet_count
-  ami                         = "ami-0801976e993cd4ddf"
+  ami                         = var.ami_type
   instance_type               = var.instance_type
   availability_zone           = aws_subnet.subnets[count.index].availability_zone
   vpc_security_group_ids      = [aws_security_group.exam_sg.id]

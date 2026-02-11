@@ -14,3 +14,6 @@ variable "instance_type" {
 variable "assign_public_ip" {
   type = bool
 }
+variable "ami_type" {
+  type = string
+}

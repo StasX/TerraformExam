@@ -13,3 +13,12 @@ variable "region" {
   type    = string
   default = "us-east-1"
 }
+
+variable "ami_type" {
+  type        = string
+  default = "ami-0801976e993cd4ddf"
+}
+variable "instance_type" {
+  type = string
+  default = "t3.micro"
+}

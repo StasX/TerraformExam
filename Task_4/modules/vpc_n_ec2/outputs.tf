@@ -12,4 +12,6 @@ output "subnets" {
 output "instances_ids" {
   value = aws_instance.exam_instance[*].id 
 }
-
+output "exam_sg" {
+  value = aws_security_group.exam_sg.id
+}
