@@ -108,9 +108,12 @@
     * What does the terraform validate command do?
     > it find syntax errors and internal internal inconsistencies
     * How can you debug Terraform errors effectively?
-    >
+    > set TF_LOG=DEBUG, then use terraform plan to catch logic issues and then inspect the state file
     * What is Terraform’s ignore_changes lifecycle policy used for?
-    >
+    > it prevents terraform from updating specific resource attributes during an apply
     * How do you import existing AWS infrastructure into Terraform?
     >
+        1. add an import block
+        2. run command __*terraform plan -generate-config-out=generated.tf*__
+        3. _generated.tf_ will contain imported configuration 
 
