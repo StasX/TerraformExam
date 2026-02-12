@@ -8,7 +8,7 @@ resource "aws_key_pair" "public_key" {
   key_name   = "Key"
   public_key = tls_private_key.private_key.public_key_openssh
 }
-# save public key localy
+# save private key locally
 resource "local_file" "private_key_files" {
   content         = tls_private_key.private_key.private_key_pem
   filename        = "Key.pem"
