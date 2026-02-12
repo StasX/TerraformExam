@@ -23,10 +23,10 @@
 * ##### State Management & Backend Configuration (3 questions)
 
 
-    * Explain the difference between <u color="green">terraform refresh</u>, <u color="green">terraform plan</u>, and <u color="green">terraform apply</u>.
-    > <u color="green">terraform refresh</u> updates state file 
-    > <u color="green">terraform plan</u> generating preview
-    > <u color="green">terraform apply</u> deploying
+    * Explain the difference between *terraform refresh*, *terraform plan*, and *terraform apply*.  
+    > terraform refresh updates state file.   
+    > terraform plan generating preview.  
+    > terraform apply deploying...  
 
     * What is the difference between local and remote backends?
     > local backend means currant machine and remote backend mean to remote server that u deploying it
