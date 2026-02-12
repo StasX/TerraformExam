@@ -1,10 +1,3 @@
-
-provider "aws" {
-  access_key = var.AWS_ACCESS_KEY
-  secret_key = var.AWS_SECRET_ACCESS_KEY
-  region     = var.region
-}
-
 resource "aws_vpc" "exam_vpc" {
   cidr_block = "10.0.0.0/16"
   tags = {
