@@ -8,7 +8,7 @@
     * What is Terraform and how does it differ from other IaC tools?
     > terraform is a cloud-agnostic tool using code to provision infrastructure across multiple providers (VPS providers too)
     * Explain Terraform's declarative nature and state management.
-    > terraform is declarative: you define the "end state," and it handles the "how." State management maping the code to real resources, tracking changes and ensuring your infrastructure stays synced with your state.
+    > terraform is declarative: you define the "end state," and it handles the "how." State management mapping the code to real resources, tracking changes and ensuring your infrastructure stays synced with your state.
     * What is the purpose of the Terraform provider?
     > terraform provider is an plugin that connect between Terraform and specific cloud API.
     * How does Terraform handle dependency resolution?
@@ -38,7 +38,7 @@
 
 
     * What are the benefits of using Terraform modules?
-    > modules are reusable and making maitenence easier
+    > modules are reusable and making maintenance easier
 
     * Explain how to pass variables to a Terraform module.
     > you have to define variables in module and pass them from module declaration in root
