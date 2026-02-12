@@ -9,7 +9,7 @@ resource "aws_vpc" "exam_vpc" {
 resource "aws_subnet" "subnets" {
   count                   = var.subnet_count
   vpc_id                  = aws_vpc.exam_vpc.id
-  cidr_block              = cidrsubnet("10.0.0.0/16", 8, count.index+1)
+  cidr_block              = cidrsubnet(var.vpc_cidr, 8, count.index+1)
   map_public_ip_on_launch = true
   availability_zone       = count.index % 2 == 0 ? "us-east-1a" : "us-east-1b"
   tags = {
