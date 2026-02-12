@@ -23,10 +23,10 @@
 * ##### State Management & Backend Configuration (3 questions)
 
 
-    * Explain the difference between **_terraform refresh_**, **_terraform plan_**, and **_terraform apply_**.
-    > **_terraform refresh_** updates state file 
-    > **_terraform plan_** generating preview
-    > **_terraform apply_** deploying
+    * Explain the difference between <u color="green">terraform refresh</u>, <u color="green">terraform plan</u>, and <u color="green">terraform apply</u>.
+    > <u color="green">terraform refresh</u> updates state file 
+    > <u color="green">terraform plan</u> generating preview
+    > <u color="green">terraform apply</u> deploying
 
     * What is the difference between local and remote backends?
     > local backend means currant machine and remote backend mean to remote server that u deploying it
@@ -42,30 +42,26 @@
 
     * Explain how to pass variables to a Terraform module.
     > you have to define variables in module and pass them from module declaration in root
-        first create a variables in a module:
-        ```terraform
+        *first create a variables in a module:*
             # modules/some_module/variables.tf
 
             variable "name" {
                 type = string
             }
-        ```
-        than pass values from root:  
-        ```terraform
+
+        *than pass values from root:*
             module "some_module" {
                 source = "./modules/some_module"
                 name = "abc"
             }
-        ```
-        now you can use passed value in module:
-        ```terraform
+        
+        *now you can use passed value in module:*
             resource "aws_vpc" "main_vpc" {
                 cidr_block = "10.0.0.0/16"
                 tags = {
                     Name = var.name
                 }
             }
-        ```
 
 
     * What is the difference between count and for_each?
@@ -73,24 +69,23 @@
     
     * How do you source a module from a Git repository?
     > you just need to use path to git repo in module source:
-        ```Terraform
-            module "some_module" {
-                source = "git@github.com:username/repo.git?ref=v1.0.0"
-                # ...
-            }
-        ``` 
+    
+        module "some_module" {  
+            source = "git@github.com:username/repo.git?ref=v1.0.0"  
+                # ...  
+        } 
 
 * ##### Terraform with AWS (4 questions)
 
 
     * How do you create an EC2 instance with Terraform?
     > define an aws_instance resource in a .tf file, specifying the AMI and instance type, then run terraform plan and then terraform apply.
-        ```terraform
-            resource "aws_instance" "example" {
-                ami           = "ami-0c55b159cbfafe1f0"
-                instance_type = "t2.micro"
-            }
-        ```
+        
+        resource "aws_instance" "example" {
+            ami           = "ami-0c55b159cbfafe1f0"
+            instance_type = "t2.micro"
+        }
+        
     * What are the required fields for defining a VPC in Terraform?
     > cidr_block
     * Explain how Terraform manages IAM policies in AWS.

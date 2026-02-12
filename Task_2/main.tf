@@ -45,7 +45,7 @@ resource "aws_route_table" "public_rt" {
   }
 
   tags = {
-    "Name"    = "Prublic Route Table"
+    "Name"    = "Public Route Table"
     "Created" = "Terraform"
   }
 }
