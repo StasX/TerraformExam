@@ -4,6 +4,7 @@ resource "aws_instance" "exam_instance" {
   availability_zone           = "us-east-1a"
   vpc_security_group_ids      = [aws_security_group.exam_sg.id]
   subnet_id                   = aws_subnet.subnets[0].id
+  key_name                    = aws_key_pair.public_key.key_name
   associate_public_ip_address = var.assign_public_ip
   tags = {
     "Name"    = "Exam Machine"

@@ -63,7 +63,7 @@ resource "aws_launch_template" "exam_template" {
   name_prefix   = "exam-"
   image_id      = var.ami_type
   instance_type = var.instance_type
-
+  key_name = module.vpc_n_ec2.key_name
   network_interfaces {
     associate_public_ip_address = true
     security_groups             = [module.vpc_n_ec2.exam_sg]

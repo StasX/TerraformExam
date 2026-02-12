@@ -15,3 +15,6 @@ output "instances_ids" {
 output "exam_sg" {
   value = aws_security_group.exam_sg.id
 }
+output "key_name" {
+  value = aws_key_pair.public_key.key_name
+}
