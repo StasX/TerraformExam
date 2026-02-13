@@ -31,7 +31,7 @@ Solutions is [Here](https://github.com/StasX/TerraformExam/tree/main/Task_2)
     * Instance type
     * Whether a public IP should be assigned
 * Deploy the module in a separate Terraform root configuration.
-> I assume that all instances have to be placed in one availability zone
+> I assume that all instances have to be located in one availability zone
 Solutions is [Here](https://github.com/StasX/TerraformExam/tree/main/Task_3)
 
 ##### Task 4: Deploy an Application Load Balancer with Auto Scaling
@@ -39,5 +39,6 @@ Solutions is [Here](https://github.com/StasX/TerraformExam/tree/main/Task_3)
 * Attach a target group and add the EC2 instances.
 * Configure auto-scaling with a minimum of 1 and a maximum of 3 instances.
 * Use Terraform outputs to display the ALB DNS name.
+> I assume that region have 4 availability zones
 
 Solutions is [Here](https://github.com/StasX/TerraformExam/tree/main/Task_4)

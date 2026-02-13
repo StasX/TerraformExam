@@ -1,6 +1,6 @@
-output "instace_public_ip" {
+output "instance_public_ip" {
   description = "Public IP address of the instance"
-  value       = module.vpc_n_ec2.instace_public_ip
+  value       = module.vpc_n_ec2.instance_public_ip
 }
 
 output "alb_dns_name" {

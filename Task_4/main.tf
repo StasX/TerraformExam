@@ -1,10 +1,12 @@
 module "vpc_n_ec2" {
   source           = "./modules/vpc_n_ec2"
   vpc_cidr         = "10.0.0.0/16"
-  subnet_count     = 2
+  subnet_count     = 4
   instance_type    = var.instance_type
   assign_public_ip = true
   ami_type         = var.ami_type
+  az               = var.az
+  region_type      = var.region
 }
 
 resource "aws_lb" "exam_alb" {
@@ -56,7 +58,7 @@ resource "aws_launch_template" "exam_template" {
   name_prefix   = "exam-"
   image_id      = var.ami_type
   instance_type = var.instance_type
-  key_name = module.vpc_n_ec2.key_name
+  key_name      = module.vpc_n_ec2.key_name
   network_interfaces {
     associate_public_ip_address = true
     security_groups             = [module.vpc_n_ec2.exam_sg]

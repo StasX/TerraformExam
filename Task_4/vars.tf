@@ -15,10 +15,15 @@ variable "region" {
 }
 
 variable "ami_type" {
-  type        = string
+  type    = string
   default = "ami-0801976e993cd4ddf"
 }
 variable "instance_type" {
-  type = string
+  type    = string
   default = "t3.micro"
+}
+
+variable "az" {
+  type    = list(string)
+  default = ["a", "b", "c", "d"]
 }
