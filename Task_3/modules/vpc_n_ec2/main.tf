@@ -11,7 +11,7 @@ resource "aws_subnet" "subnets" {
   vpc_id                  = aws_vpc.exam_vpc.id
   cidr_block              = cidrsubnet(var.vpc_cidr, 8, count.index+1)
   map_public_ip_on_launch = true
-  availability_zone       = "us-east-1a"
+  availability_zone       = "${var.region}a"
   tags = {
     "Name"    = "Subnet ${count.index+1}"
     "Created" = "Terraform"
@@ -22,7 +22,7 @@ resource "aws_internet_gateway" "exam_ig" {
   vpc_id = aws_vpc.exam_vpc.id
   tags = {
     "Name"    = "Internet Gateway"
-    "Created" = "terraform"
+    "Created" = "Terraform"
   }
 }
 

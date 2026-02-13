@@ -1,4 +1,3 @@
-output "instace_public_ip" {
-  description = "Public IP address of the instance"
+output "instance_public_ip" {
   value       = aws_instance.exam_instance.public_ip
 }

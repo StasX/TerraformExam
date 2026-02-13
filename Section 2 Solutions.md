@@ -27,7 +27,9 @@ Solutions is [Here](https://github.com/StasX/TerraformExam/tree/main/Task_2)
 * The module should allow users to specify:
     * VPC CIDR range
     * Subnet count
+    > I assume that all subnets are public 
     * Instance type
+    > I assume that will be created just one instance and connected only to first subnet
     * Whether a public IP should be assigned
 * Deploy the module in a separate Terraform root configuration.
 
