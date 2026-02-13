@@ -1,7 +1,7 @@
 variable "vpc_cidr" {
   type = string
   validation {
-    condition     = can(regex("^[0-9]{1,3}(\\.[0-9]{1,3}){3}$", var.vpc_cidr))
+    condition     = can(regex("^\\d{1,3}(\\.\\d{1,3}){3}/\\d{1,2}$", var.vpc_cidr))
     error_message = "vpc_cidr should be IP"
   }
 }

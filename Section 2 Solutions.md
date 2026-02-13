@@ -27,12 +27,11 @@ Solutions is [Here](https://github.com/StasX/TerraformExam/tree/main/Task_2)
 * The module should allow users to specify:
     * VPC CIDR range
     * Subnet count
-    > I assume that all subnets are public 
+    > I assume that all subnets are public and have one instance
     * Instance type
-    > I assume that will be created just one instance and connected only to first subnet
     * Whether a public IP should be assigned
 * Deploy the module in a separate Terraform root configuration.
-
+> I assume that all instances have to be placed in one availability zone
 Solutions is [Here](https://github.com/StasX/TerraformExam/tree/main/Task_3)
 
 ##### Task 4: Deploy an Application Load Balancer with Auto Scaling
