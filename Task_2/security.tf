@@ -24,7 +24,6 @@ resource "aws_security_group" "exam_sg" {
     to_port          = 0
     protocol         = "-1"
     cidr_blocks      = ["0.0.0.0/0"]
-    ipv6_cidr_blocks = ["::/0"]
   }
   tags = {
     "Name"    = "Exam Security group"
